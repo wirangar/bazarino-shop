@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سپاسگزاری | بازارینو - فروشگاه ایرانی در ایتالیا</title>
+  <meta name="description" content="سپاسگزاری از خرید شما - فروشگاه آنلاین محصولات ایرانی در ایتالیا">
+  <!-- لینک‌های استایل مشابه index.html -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- نوار اطلاع‌رسانی و هدر مشابه index.html -->
+  
+  <main class="thankyou-page">
+    <div class="container">
+      <div class="thankyou-content">
+        <div class="checkmark-circle">
+          <i class="fas fa-check"></i>
+        </div>
+        <h1>سفارش شما با موفقیت ثبت شد!</h1>
+        <p class="order-number">شماره سفارش: <span id="order-id">#BZR-${Math.floor(Math.random() * 10000)}</span></p>
+        <p>
+          از خرید شما سپاسگزاریم. سفارش شما دریافت شده و در حال پردازش است. جزئیات سفارش به آدرس ایمیل شما ارسال شده است.
+        </p>
+        <div class="order-summary">
+          <h3>خلاصه سفارش</h3>
+          <div class="summary-items" id="summary-items">
+            <!-- آیتم‌های سفارش به صورت داینامیک لود می‌شوند -->
+          </div>
+          <div class="summary-total">
+            <p>جمع کل: <span id="summary-total">€0.00</span></p>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <a href="index.html" class="back-to-home">بازگشت به صفحه اصلی</a>
+          <a href="#" class="track-order">پیگیری سفارش</a>
+        </div>
+      </div>
+      
+      <div class="customer-support">
+        <h3>نیاز به کمک دارید؟</h3>
+        <p>تیم پشتیبانی بازارینو آماده پاسخگویی به سوالات شماست.</p>
+        <div class="support-methods">
+          <a href="tel:+391234567890" class="support-method">
+            <i class="fas fa-phone"></i>
+            <span>+39 123 456 7890</span>
+          </a>
+          <a href="mailto:info@bazarino.it" class="support-method">
+            <i class="fas fa-envelope"></i>
+            <span>info@bazarino.it</span>
+          </a>
+          <a href="https://t.me/Bazarino_support" class="support-method">
+            <i class="fab fa-telegram"></i>
+            <span>@Bazarino_support</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- فوتر مشابه index.html -->
+  
+  <script src="assets/js/main.js"></script>
+  <script>
+    // نمایش خلاصه سفارش
+    document.addEventListener('DOMContentLoaded', function() {
+      const order = JSON.parse(localStorage.getItem('lastOrder'));
+      
+      if (order) {
+        // نمایش شماره سفارش
+        document.getElementById('order-id').textContent = `#${order.id}`;
+        
+        // نمایش آیتم‌های سفارش
+        const summaryItems = document.getElementById('summary-items');
+        let html = '';
+        let total = 0;
+        
+        order.items.forEach(item => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+          
+          html += `
+            <div class="summary-item">
+              <div class="item-name">${item.name} <span>× ${item.quantity}</span></div>
+              <div class="item-price">€${itemTotal.toFixed(2)}</div>
+            </div>
+          `;
+        });
+        
+        summaryItems.innerHTML = html;
+        document.getElementById('summary-total').textContent = `€${total.toFixed(2)}`;
+      }
+    });
+  </script>
+</body>
+</html>
