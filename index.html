@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بازارینو | فروشگاه ایرانی در ایتالیا | سفارش آنلاین محصولات ایرانی</title>
+  <meta name="description" content="سفارش آنلاین محصولات اصیل ایرانی در ایتالیا با بازارینو | ربات تلگرامی هوشمند | تحویل در پروجا و سراسر ایتالیا">
+  <meta name="keywords" content="خرید ایرانی در ایتالیا, محصولات ایرانی, بازارینو, فروشگاه ایرانی, پروجا, ایرانیان ایتالیا">
+  <meta property="og:title" content="بازارینو | فروشگاه ایرانی در ایتالیا">
+  <meta property="og:description" content="سفارش آنلاین محصولات اصیل ایرانی در ایتالیا">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- نوار اطلاع‌رسانی -->
+  <div class="info-bar">
+    <div class="container">
+      <div class="info-text">
+        <i class="fas fa-truck"></i>
+        <span>ارسال رایگان برای سفارشات بالای 50 یورو در پروجا</span>
+      </div>
+      <div class="language-switcher">
+        <select id="language-selector">
+          <option value="fa">فارسی</option>
+          <option value="it">Italiano</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- هدر اصلی -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="assets/img/logo.svg" alt="لوگوی بازارینو" class="logo" loading="lazy">
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">خانه</a></li>
+            <li><a href="#products">محصولات</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="#contact">تماس</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-actions">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+          <a href="cart.html" class="cart-btn">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- هیرو بخش -->
+  <section class="hero-section">
+    <div class="hero-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('assets/img/hero-1.jpg')">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title">محصولات اصیل ایرانی در ایتالیا</h1>
+              <p class="hero-subtitle">کیفیت بالا، قیمت مناسب، تحویل سریع</p>
+              <a href="#products" class="hero-btn">مشاهده محصولات</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url('assets/img/hero-2.jpg')">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title">ارسال به تمام نقاط ایتالیا</h1>
+              <p class="hero-subtitle">از پروجا تا رم و میلان</p>
+              <a href="#products" class="hero-btn">سفارش دهید</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- بخش دسته‌بندی‌ها -->
+  <section class="categories-section">
+    <div class="container">
+      <h2 class="section-title">دسته‌بندی محصولات</h2>
+      <div class="categories-grid">
+        <a href="#" class="category-card" data-category="rice">
+          <div class="category-img">
+            <img src="assets/img/categories/rice.jpg" alt="برنج ایرانی" loading="lazy">
+          </div>
+          <h3 class="category-title">برنج ایرانی</h3>
+        </a>
+        <a href="#" class="category-card" data-category="nuts">
+          <div class="category-img">
+            <img src="assets/img/categories/nuts.jpg" alt="خشکبار" loading="lazy">
+          </div>
+          <h3 class="category-title">خشکبار</h3>
+        </a>
+        <a href="#" class="category-card" data-category="spices">
+          <div class="category-img">
+            <img src="assets/img/categories/spices.jpg" alt="ادویه‌جات" loading="lazy">
+          </div>
+          <h3 class="category-title">ادویه‌جات</h3>
+        </a>
+        <a href="#" class="category-card" data-category="beverages">
+          <div class="category-img">
+            <img src="assets/img/categories/beverages.jpg" alt="نوشیدنی‌ها" loading="lazy">
+          </div>
+          <h3 class="category-title">نوشیدنی‌ها</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش محصولات ویژه -->
+  <section class="featured-products" id="products">
+    <div class="container">
+      <h2 class="section-title">محصولات ویژه</h2>
+      <div class="products-filter">
+        <button class="filter-btn active" data-filter="all">همه</button>
+        <button class="filter-btn" data-filter="new">جدید</button>
+        <button class="filter-btn" data-filter="discount">تخفیف‌دار</button>
+        <button class="filter-btn" data-filter="bestseller">پرفروش</button>
+      </div>
+      
+      <div class="products-grid" id="products-container">
+        <!-- محصولات به صورت داینامیک از JSON یا Google Sheets لود می‌شوند -->
+      </div>
+      
+      <div class="load-more-container">
+        <button class="load-more-btn" id="load-more">بارگذاری بیشتر</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش ویژگی‌های بازارینو -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3 class="feature-title">کیفیت تضمینی</h3>
+          <p class="feature-desc">محصولات با کیفیت بالا و اصیل ایرانی</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-truck-fast"></i>
+          </div>
+          <h3 class="feature-title">تحویل سریع</h3>
+          <p class="feature-desc">ارسال در کمترین زمان ممکن</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="feature-title">پشتیبانی 24/7</h3>
+          <p class="feature-desc">پاسخگویی به سوالات شما در هر زمان</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-percent"></i>
+          </div>
+          <h3 class="feature-title">تخفیف‌های ویژه</h3>
+          <p class="feature-desc">تخفیف‌های دوره‌ای برای مشتریان دائمی</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش تماس -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2 class="section-title">تماس با ما</h2>
+          <p>برای سفارشات، پیشنهادات و شکایات با ما در تماس باشید</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-phone"></i>
+              <span>+39 123 456 7890</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <span>info@bazarino.it</span>
+            </div>
+            <div class="contact-method">
+              <i class="fab fa-telegram"></i>
+              <span>@Bazarino_support</span>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>پروجا، ایتالیا</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="نام شما" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="ایمیل شما" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="پیام شما" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">ارسال پیام</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/img/logo-white.svg" alt="لوگوی بازارینو" class="footer-logo">
+          <p class="footer-about">بازارینو اولین فروشگاه آنلاین محصولات ایرانی در ایتالیا با هدف ارائه محصولات باکیفیت و اصیل ایرانی به هموطنان عزیز تأسیس شده است.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">لینک‌های سریع</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="#products">محصولات</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="#contact">تماس با ما</a></li>
+            <li><a href="cart.html">سبد خرید</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">خدمات مشتریان</h3>
+          <ul class="footer-links">
+            <li><a href="#">سوالات متداول</a></li>
+            <li><a href="#">رویه بازگرداندن کالا</a></li>
+            <li><a href="#">شرایط و ضوابط</a></li>
+            <li><a href="#">حریم خصوصی</a></li>
+            <li><a href="#">راهنمای خرید</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3 class="footer-title">خبرنامه</h3>
+          <p>با عضویت در خبرنامه از جدیدترین محصولات و تخفیف‌ها با خبر شوید.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="ایمیل شما" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>© <span id="current-year"></span> تمام حقوق برای بازارینو محفوظ است.</p>
+        </div>
+        <div class="payment-methods">
+          <img src="assets/img/payments/paypal.png" alt="PayPal">
+          <img src="assets/img/payments/visa.png" alt="Visa">
+          <img src="assets/img/payments/mastercard.png" alt="Mastercard">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- دکمه بازگشت به بالا -->
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- اسکریپت‌ها -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
