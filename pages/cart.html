@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <!-- همان هد مشابه index.html -->
+</head>
+<body>
+  <!-- هدر مشابه index.html -->
+
+  <main class="cart-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>سبد خرید شما</h1>
+        <nav class="breadcrumb">
+          <a href="index.html">خانه</a>
+          <span>/</span>
+          <span>سبد خرید</span>
+        </nav>
+      </div>
+      
+      <div class="cart-container">
+        <div class="cart-items">
+          <div class="cart-table-header">
+            <div class="header-item">محصول</div>
+            <div class="header-item">قیمت</div>
+            <div class="header-item">تعداد</div>
+            <div class="header-item">جمع</div>
+            <div class="header-item">حذف</div>
+          </div>
+          
+          <div class="cart-items-list" id="cart-items-container">
+            <!-- آیتم‌های سبد خرید به صورت داینامیک لود می‌شوند -->
+          </div>
+          
+          <div class="cart-actions">
+            <button class="continue-shopping">ادامه خرید</button>
+            <button class="clear-cart">پاک کردن سبد</button>
+          </div>
+        </div>
+        
+        <div class="cart-summary">
+          <h3 class="summary-title">جمع سبد خرید</h3>
+          
+          <div class="summary-row">
+            <span>جمع کل</span>
+            <span id="subtotal">€0.00</span>
+          </div>
+          
+          <div class="summary-row">
+            <span>هزینه ارسال</span>
+            <span id="shipping">€0.00</span>
+          </div>
+          
+          <div class="summary-row discount-row">
+            <div class="coupon-form">
+              <input type="text" placeholder="کد تخفیف">
+              <button class="apply-coupon">اعمال</button>
+            </div>
+          </div>
+          
+          <div class="summary-row total-row">
+            <span>مجموع نهایی</span>
+            <span id="total">€0.00</span>
+          </div>
+          
+          <button class="checkout-btn">تکمیل سفارش</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- فوتر مشابه index.html -->
+
+  <!-- مودال تکمیل سفارش -->
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>تکمیل اطلاعات سفارش</h2>
+      
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="fullname">نام کامل</label>
+          <input type="text" id="fullname" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">شماره تماس</label>
+          <input type="tel" id="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">آدرس کامل</label>
+          <textarea id="address" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="postal-code">کد پستی</label>
+          <input type="text" id="postal-code" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="delivery-type">نوع تحویل</label>
+          <select id="delivery-type" required>
+            <option value="">انتخاب کنید</option>
+            <option value="perugia">تحویل در پروجا</option>
+            <option value="italy">ارسال به سایر نقاط ایتالیا</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="notes">یادداشت (اختیاری)</label>
+          <textarea id="notes" rows="2"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-order">ثبت نهایی سفارش</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- اسکریپت‌ها -->
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>
